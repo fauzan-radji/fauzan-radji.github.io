@@ -42,7 +42,7 @@
       "title": "KSL Website",
       "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
       "web": "https://kslung.com/",
-      "tools": ["laravel", "tailwind"]
+      "tools": ["laravel", "tailwind", "mysql"]
     },
     {
       "id": 6,
@@ -113,6 +113,12 @@
       "name": "laravel",
       "slug": "laravel",
       "bg": "#FF2D20",
+      "color": "white"
+    },
+    {
+      "name": "mysql",
+      "slug": "mysql",
+      "bg": "#4479A1",
       "color": "white"
     }
   ]
