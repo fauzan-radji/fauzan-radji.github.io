@@ -11,21 +11,21 @@
     },
     {
       "id": 2,
-      "image": "/images/anonymsg.png",
-      "title": "Anonymsg",
-      "description": "An anonymous messaging platform for you to share your opinions freely without fear of other people's judgment",
-      "web": "https://anonymsg.vercel.app/",
-      "github": "https://github.com/fauzan-radji/anonymsg",
-      "tools": ["nextjs", "tailwind", "firebase", "vercel"]
-    },
-    {
-      "id": 3,
       "image": "/images/kabggis.png",
       "title": "Kabupaten Gorontalo GIS",
       "description": "Kabupaten Gorontalo GIS (KabGGIS) is a WebGIS that provides geospatial information on agricultural areas in Gorontalo Regency, Gorontalo, Indonesia.",
       "web": "https://kabggis.github.io/",
       "github": "https://github.com/kabggis/kabggis.github.io/",
       "tools": ["react", "leaflet", "tailwind"]
+    },
+    {
+      "id": 3,
+      "image": "/images/anonymsg.png",
+      "title": "Anonymsg",
+      "description": "An anonymous messaging platform for you to share your opinions freely without fear of other people's judgment",
+      "web": "https://anonymsg.vercel.app/",
+      "github": "https://github.com/fauzan-radji/anonymsg",
+      "tools": ["nextjs", "tailwind", "firebase", "vercel"]
     },
     {
       "id": 4,
@@ -38,20 +38,20 @@
     },
     {
       "id": 5,
-      "image": "/images/ksl.png",
-      "title": "KSL Website",
-      "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
-      "web": "https://kslung.com/",
-      "tools": ["laravel", "tailwind", "mysql"]
-    },
-    {
-      "id": 6,
       "image": "/images/seacinema.png",
       "title": "Sea Cinema",
       "description": "Seacinema is a functioning movie booking website that allows users to book tickets for movies, view movie details, and view their booking history.",
       "web": "https://seacinema.vercel.app/",
       "github": "https://github.com/fauzan-radji/react-movie-app/",
       "tools": ["react", "tailwind", "vercel"]
+    },
+    {
+      "id": 6,
+      "image": "/images/ksl.png",
+      "title": "KSL Website",
+      "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
+      "web": "https://kslung.com/",
+      "tools": ["laravel", "tailwind", "mysql"]
     }
   ],
   "tools": [
