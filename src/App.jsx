@@ -1,14 +1,16 @@
 import {
   AtSymbolIcon,
+  DocumentArrowDownIcon,
   EnvelopeIcon,
   PaperAirplaneIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import { Card, Heading, Input, Modal } from "./components";
-import { FaFilePdf, FaGithub } from "react-icons/fa6";
+import { Card, Heading, Highlight, Input, Modal } from "./components";
 import { useEffect, useState } from "react";
 
+import { FaLinkedin } from "react-icons/fa6";
 import profilePict from "./assets/profile-pict.png";
+import useAppearOnScroll from "./hooks/useAppearOnScroll";
 
 /**
  * @typedef Project
@@ -51,56 +53,70 @@ export default function App() {
       });
   }, []);
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const {
+    refs: [
+      aboutHeadingRef,
+      aboutParagraphRef,
+      projectHeadingRef,
+      contactHeadingRef,
+      contactFormRef,
+    ],
+    aosClassName,
+  } = useAppearOnScroll(5);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageToPreview, setImageToPreview] = useState("");
 
   return (
     <>
-      <div className="flex min-h-[100dvh] max-w-full flex-col justify-start overflow-x-hidden bg-slate-200 text-slate-950">
-        <section className="rounded-b-[3rem] bg-slate-950 py-24 text-slate-50 shadow-xl shadow-slate-500/40 md:rounded-b-[5rem]">
-          <div className="container mx-auto flex flex-col items-center gap-8 px-6 landscape:flex-row-reverse landscape:justify-between landscape:px-20">
+      <div className="flex min-h-[100dvh] max-w-full flex-col justify-start overflow-hidden bg-dark-knight text-white">
+        <section className="py-24">
+          <div className="container mx-auto flex flex-col items-center gap-8 px-6 lg:flex-row-reverse lg:justify-between lg:px-20">
             <div className="relative flex aspect-square w-80 items-center justify-center md:aspect-auto md:h-[28rem]">
-              <svg
-                className="absolute bottom-2 aspect-square h-4/5 animate-spin text-slate-600 [animation-duration:64s]"
-                viewBox="0 0 900 900"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-              >
-                <g transform="translate(510.88443096263313 386.09160042626115)">
-                  <path
-                    d="M259.5 -237C329.5 -189.5 374.8 -94.8 360.5 -14.2C346.3 66.3 272.6 132.6 202.6 214.8C132.6 296.9 66.3 395 -23.4 418.4C-113.1 441.8 -226.3 390.6 -320 308.4C-413.8 226.3 -488.1 113.1 -484.8 3.3C-481.5 -106.5 -400.6 -213.1 -306.8 -260.6C-213.1 -308.1 -106.5 -296.5 -5.9 -290.6C94.8 -284.8 189.5 -284.5 259.5 -237"
-                    fill="currentColor"
-                  ></path>
-                </g>
-              </svg>
               <img
                 src={profilePict}
                 alt="Fauzan Radji"
                 className="absolute bottom-0 ml-4 aspect-[2/3] h-full rounded-b-full object-contain"
               />
             </div>
-            <div className="flex flex-col items-start gap-2 text-center md:gap-4 md:text-left">
-              <h1 className="text-3xl font-bold md:text-5xl">
-                Tri Putra Fauzan H. Radji
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h1 className="mb-2 whitespace-nowrap text-3xl font-bold text-bright-mint sm:text-4xl md:mb-4 md:text-5xl">
+                <span className="text-glitchy-shader-blue">&lt;</span>
+                <span className="hidden sm:inline">
+                  Tri
+                  <span className="inline-block w-0.5"></span>
+                  Putra
+                </span>
+                <span className="inline-block w-0.5"></span>
+                Fauzan
+                <span className="inline-block w-0.5"></span>
+                <span className="hidden sm:inline">
+                  H<span className="text-lemon-peel">.</span>
+                </span>
+                <span>Radji</span>{" "}
+                <span className="text-glitchy-shader-blue">/&gt;</span>
               </h1>
-              <h3 className="md:text-xl">Web Developer | Android Developer</h3>
-              <div className="flex gap-2">
+              <h3 className="mb-8 text-xl sm:text-2xl">
+                Web Developer <span className="text-mandarin-peel">|</span>{" "}
+                Android Developer
+              </h3>
+              <div className="flex flex-wrap justify-center gap-2">
                 <a
                   href="/resume.pdf"
-                  download="Fauzan Radji - Resume"
-                  className="flex items-center gap-2 rounded bg-slate-500 px-4 py-2 text-slate-200 shadow-md hover:bg-slate-600"
+                  download="Fauzan Radji - CV"
+                  className="flex items-center gap-2 rounded bg-empire-yellow/80 px-4 py-2 text-corbeau shadow-md transition-colors hover:bg-empire-yellow"
                 >
-                  Download Resume
-                  <FaFilePdf className="h-4 w-4" />
+                  <DocumentArrowDownIcon className="h-5 w-5" />
+                  Download CV
                 </a>
                 <a
-                  href="https://github.com/fauzan-radji"
+                  href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji-404810257/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="flex items-center gap-2 rounded border border-slate-500 px-4 py-2 text-slate-200 shadow-md hover:bg-slate-600"
+                  className="flex items-center gap-2 rounded border border-empire-yellow px-4 py-2 text-inherit shadow-md transition-colors hover:bg-empire-yellow hover:text-corbeau"
                 >
-                  View GitHub
-                  <FaGithub className="h-4 w-4" />
+                  <FaLinkedin className="h-4 w-4" />
+                  Hire Me
                 </a>
               </div>
             </div>
@@ -108,34 +124,36 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section className="rounded-b-[3rem] bg-gradient-to-b from-transparent to-slate-300 px-6 py-20 md:rounded-b-[5rem]">
+        <section className="px-6 py-20">
           <div className="container mx-auto flex flex-col items-center gap-4">
-            <Heading>About</Heading>
-            <div className="flex max-w-3xl flex-col gap-4 md:flex-row">
-              <p className="flex-1">
-                I am a self-taught web developer who is passionate about
-                creating web applications that are both beautiful and
-                functional. I have experience in building websites using HTML,
-                CSS, and JavaScript. I am also familiar with various front-end
-                libraries and frameworks, such as React and Tailwind CSS.
-              </p>
-              <p className="flex-1">
-                I am currently looking for opportunities to work on projects
-                that will allow me to further develop my skills and gain more
-                experience in web development. I am open to collaborating with
-                other developers and designers to create innovative and
-                user-friendly web applications.
-              </p>
-            </div>
+            <Heading ref={aboutHeadingRef} className={aosClassName()}>
+              About
+            </Heading>
+            <p
+              ref={aboutParagraphRef}
+              className={aosClassName(
+                "max-w-3xl text-center text-xl leading-loose delay-700"
+              )}
+            >
+              I am an undergraduate student majoring in Informatics Engineering
+              at the Universitas Negeri Gorontalo. I have a passion for{" "}
+              <Highlight className="delay-700">Android</Highlight> and{" "}
+              <Highlight className="delay-[1200ms]">Web development</Highlight>.
+              I am a fast learner and always eager to learn new things. With my
+              skills and experience, I am confident in my ability to create
+              amazing projects.
+            </p>
           </div>
         </section>
 
         {/* Projects Section */}
-        <section className="rounded-b-[3rem] bg-gradient-to-b from-transparent to-slate-300 px-6 py-20 md:rounded-b-[5rem]">
+        <section className="px-6 py-20">
           <div className="container mx-auto flex flex-col items-center gap-4">
-            <Heading>Projects</Heading>
+            <Heading ref={projectHeadingRef} className={aosClassName()}>
+              Projects
+            </Heading>
             <div className="flex flex-wrap items-start justify-center gap-8">
-              {projects.map((project) => (
+              {projects.map((project, index) => (
                 <Card
                   key={project.id}
                   image={project.image}
@@ -149,6 +167,9 @@ export default function App() {
                     setImageToPreview(imageUrl);
                     setIsModalOpen(true);
                   }}
+                  style={{
+                    transitionDelay: `${index * 100}ms`,
+                  }}
                 />
               ))}
             </div>
@@ -156,12 +177,17 @@ export default function App() {
         </section>
 
         {/* Contact Section */}
-        <section className="rounded-b-[3rem] bg-gradient-to-b from-transparent to-slate-300 px-6 py-20 md:rounded-b-[5rem]">
+        <section className="px-6 py-20">
           <div className="container mx-auto flex flex-col items-center gap-4">
-            <Heading>Contact</Heading>
+            <Heading ref={contactHeadingRef} className={aosClassName()}>
+              Contact
+            </Heading>
             <form
+              ref={contactFormRef}
               onSubmit={(e) => e.preventDefault()}
-              className="mx-auto flex w-full max-w-lg flex-col gap-4 rounded-md bg-slate-200 px-8 pb-4 pt-8 shadow-md"
+              className={aosClassName(
+                "mx-auto flex w-full max-w-lg flex-col gap-4 rounded-md bg-corbeau px-8 pb-4 pt-8 shadow-md delay-700"
+              )}
             >
               <Input
                 name="name"
@@ -182,7 +208,7 @@ export default function App() {
                 icon={EnvelopeIcon}
               />
 
-              <button className="flex w-max items-center gap-1 self-end rounded bg-slate-500 px-4 py-2 text-slate-200 shadow-md hover:bg-slate-600">
+              <button className="flex w-max items-center gap-1 self-end rounded bg-empire-yellow/80 px-4 py-2 text-corbeau shadow-md hover:bg-empire-yellow">
                 Send
                 <PaperAirplaneIcon className="h-4 w-4" />
               </button>

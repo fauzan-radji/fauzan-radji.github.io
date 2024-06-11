@@ -2,6 +2,8 @@ import { FaAndroid, FaGithub, FaGlobe } from "react-icons/fa6";
 
 import PropTypes from "prop-types";
 import SimpleIcons from "./SimpleIcons";
+import { twMerge } from "tailwind-merge";
+import useAppearOnScroll from "../hooks/useAppearOnScroll";
 
 /**
  * @typedef Tool
@@ -32,9 +34,17 @@ export default function Card({
   github,
   tools,
   openPreview,
+  className,
+  style,
 }) {
+  const { ref, aosClassName } = useAppearOnScroll();
+
   return (
-    <div className="w-72">
+    <div
+      ref={ref}
+      className={twMerge(aosClassName("w-72", className))}
+      style={style}
+    >
       <div
         className="group mb-4 aspect-video w-full cursor-zoom-in overflow-hidden rounded-lg shadow-md"
         onClick={() => openPreview(image)}
@@ -48,12 +58,12 @@ export default function Card({
 
       <div className="flex flex-col gap-2">
         <div className="flex justify-between">
-          <h4 className="font-bold">{title}</h4>
+          <h4 className="font-bold text-lemon-peel">{title}</h4>
 
           <div className="flex items-center gap-2">
             {apk && (
               <a
-                className="cursor-pointer text-lg text-[#34A853] hover:text-[#34A853cc]"
+                className="cursor-pointer rounded border border-empire-yellow/50 px-2 py-1 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
                 href={apk}
                 download={title}
                 title="Download APK"
@@ -64,7 +74,7 @@ export default function Card({
 
             {web && (
               <a
-                className="cursor-pointer text-lg text-cyan-600 hover:text-cyan-600/75"
+                className="cursor-pointer rounded border border-empire-yellow/50 px-2 py-1 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
                 href={web}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -76,7 +86,7 @@ export default function Card({
 
             {github && (
               <a
-                className="cursor-pointer text-lg text-[#181717ff] hover:text-[#181717cc]"
+                className="cursor-pointer rounded border border-empire-yellow/50 px-2 py-1 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
                 href={github}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -87,7 +97,7 @@ export default function Card({
             )}
           </div>
         </div>
-        <p className="text-sm text-slate-700">{description}</p>
+        <p className="text-sm">{description}</p>
         <div className="flex gap-1">
           {tools.map((tool) => (
             <div
@@ -117,4 +127,6 @@ Card.propTypes = {
   github: PropTypes.string,
   tools: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
   openPreview: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };

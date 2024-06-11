@@ -3,7 +3,27 @@
 @tailwind utilities;
 
 @layer utilities {
+  .debug,
   .debug * {
     outline: 1px solid #f002;
+  }
+
+  .debug::before,
+  .debug::after {
+    outline: 1px solid #ff02;
+  }
+
+  .highlight::before {
+    width: min(2em, 40%);
+    transition: width 1s ease-in-out;
+  }
+
+  .highlight.expanded::before {
+    width: 100%;
+  }
+
+  .appear-from-bottom {
+    opacity: 0;
+    transform: translateY(100px);
   }
 }
