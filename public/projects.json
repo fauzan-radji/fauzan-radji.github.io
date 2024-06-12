@@ -38,6 +38,15 @@
     },
     {
       "id": 5,
+      "image": "/images/json-modelizer.png",
+      "title": "JSON Modelizer",
+      "description": "A lightweight and intuitive Object-Relational Mapping (ORM) package designed to work with JSON files as a data storage solution.",
+      "npm": "https://www.npmjs.com/package/json-modelizer",
+      "github": "https://github.com/fauzan-radji/json-modelizer",
+      "tools": ["javascript", "npm", "json", "nodejs"]
+    },
+    {
+      "id": 6,
       "image": "/images/seacinema.png",
       "title": "Sea Cinema",
       "description": "Seacinema is a functioning movie booking website that allows users to book tickets for movies, view movie details, and view their booking history.",
@@ -46,7 +55,7 @@
       "tools": ["react", "tailwind", "vercel"]
     },
     {
-      "id": 6,
+      "id": 7,
       "image": "/images/ksl.png",
       "title": "KSL Website",
       "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
@@ -120,6 +129,30 @@
       "slug": "mysql",
       "bg": "#4479A1",
       "color": "white"
+    },
+    {
+      "name": "npm",
+      "slug": "npm",
+      "bg": "#CB3837",
+      "color": "white"
+    },
+    {
+      "name": "json",
+      "slug": "json",
+      "bg": "#000000",
+      "color": "white"
+    },
+    {
+      "name": "nodejs",
+      "slug": "nodedotjs",
+      "bg": "#5FA04E",
+      "color": "white"
+    },
+    {
+      "name": "javascript",
+      "slug": "javascript",
+      "bg": "#F7DF1E",
+      "color": "black"
     }
   ]
 }

@@ -58,7 +58,7 @@ export default function Contact() {
           ref={contactFormRef}
           onSubmit={handleSubmit}
           className={aosClassName(
-            "mx-auto flex w-full max-w-lg flex-col gap-4 rounded-md bg-corbeau px-8 pb-4 pt-8 shadow-md delay-700"
+            "mx-auto flex w-full max-w-lg flex-col gap-4 rounded-md bg-corbeau px-8 pb-4 pt-8 shadow-md delay-300"
           )}
         >
           <Input

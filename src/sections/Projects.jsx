@@ -1,4 +1,4 @@
-import { Card, Heading, Modal } from "../components";
+import { Card, Heading } from "../components";
 import { useEffect, useState } from "react";
 
 import useAppearOnScroll from "../hooks/useAppearOnScroll";
@@ -9,8 +9,9 @@ import useAppearOnScroll from "../hooks/useAppearOnScroll";
  * @property {string} image
  * @property {string} title
  * @property {string} description
- * @property {string?} web
  * @property {string?} apk
+ * @property {string?} npm
+ * @property {string?} web
  * @property {string?} github
  * @property {Tool[]} tools
  */
@@ -44,48 +45,32 @@ export default function Projects() {
       });
   }, []);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [imageToPreview, setImageToPreview] = useState("");
-
   const { ref, aosClassName } = useAppearOnScroll();
   return (
-    <>
-      <section className="px-6 py-20">
-        <div className="container mx-auto flex flex-col items-center gap-4">
-          <Heading ref={ref} className={aosClassName()}>
-            Projects
-          </Heading>
-          <div className="flex flex-wrap items-start justify-center gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={project.id}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                apk={project.apk}
-                web={project.web}
-                github={project.github}
-                tools={project.tools}
-                openPreview={(imageUrl) => {
-                  setImageToPreview(imageUrl);
-                  setIsModalOpen(true);
-                }}
-                style={{
-                  transitionDelay: `${index * 100}ms`,
-                }}
-              />
-            ))}
-          </div>
+    <section className="px-6 py-20">
+      <div className="container mx-auto flex flex-col items-center gap-4">
+        <Heading ref={ref} className={aosClassName()}>
+          Projects
+        </Heading>
+        <div className="flex flex-wrap items-start justify-center gap-8">
+          {projects.map((project, index) => (
+            <Card
+              key={project.id}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              apk={project.apk}
+              npm={project.npm}
+              web={project.web}
+              github={project.github}
+              tools={project.tools}
+              style={{
+                transitionDelay: `${index * 100}ms`,
+              }}
+            />
+          ))}
         </div>
-      </section>
-
-      <Modal isOpen={isModalOpen} close={() => setIsModalOpen(false)}>
-        <img
-          className="h-full w-full object-contain"
-          src={imageToPreview}
-          alt="Preview"
-        />
-      </Modal>
-    </>
+      </div>
+    </section>
   );
 }

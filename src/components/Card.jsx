@@ -1,9 +1,10 @@
-import { FaAndroid, FaGithub, FaGlobe } from "react-icons/fa6";
+import { FaAndroid, FaGithub, FaGlobe, FaNpm } from "react-icons/fa6";
 
 import PropTypes from "prop-types";
 import SimpleIcons from "./SimpleIcons";
 import { twMerge } from "tailwind-merge";
 import useAppearOnScroll from "../hooks/useAppearOnScroll";
+import { useLightbox } from "../contexts";
 
 /**
  * @typedef Tool
@@ -18,8 +19,9 @@ import useAppearOnScroll from "../hooks/useAppearOnScroll";
  * @param {string} props.image
  * @param {string} props.title
  * @param {string} props.description
- * @param {string} props.web
  * @param {string} props.apk
+ * @param {string} props.npm
+ * @param {string} props.web
  * @param {string} props.github
  * @param {Tool[]} props.tools
  * @returns
@@ -29,15 +31,16 @@ export default function Card({
   image,
   title,
   description,
-  web,
   apk,
+  npm,
+  web,
   github,
   tools,
-  openPreview,
   className,
   style,
 }) {
   const { ref, aosClassName } = useAppearOnScroll();
+  const lightbox = useLightbox();
 
   return (
     <div
@@ -47,7 +50,10 @@ export default function Card({
     >
       <div
         className="group mb-4 aspect-video w-full cursor-zoom-in overflow-hidden rounded-lg shadow-md"
-        onClick={() => openPreview(image)}
+        onClick={() => {
+          lightbox.open();
+          lightbox.setImageUrl(image);
+        }}
       >
         <img
           className="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
@@ -63,7 +69,7 @@ export default function Card({
           <div className="flex items-center gap-2">
             {apk && (
               <a
-                className="cursor-pointer rounded border border-empire-yellow/50 px-2 py-1 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
+                className="flex h-6 cursor-pointer items-center rounded border border-empire-yellow/50 px-2 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
                 href={apk}
                 download={title}
                 title="Download APK"
@@ -72,9 +78,21 @@ export default function Card({
               </a>
             )}
 
+            {npm && (
+              <a
+                className="flex h-6 cursor-pointer items-center rounded border border-empire-yellow/50 px-2 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
+                href={npm}
+                target="_blank"
+                rel="noreferrer noopener"
+                title="View on NPM"
+              >
+                <FaNpm className="h-6 w-6" />
+              </a>
+            )}
+
             {web && (
               <a
-                className="cursor-pointer rounded border border-empire-yellow/50 px-2 py-1 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
+                className="flex h-6 cursor-pointer items-center rounded border border-empire-yellow/50 px-2 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
                 href={web}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -122,11 +140,11 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  web: PropTypes.string,
   apk: PropTypes.string,
+  npm: PropTypes.string,
+  web: PropTypes.string,
   github: PropTypes.string,
   tools: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
-  openPreview: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
 };
