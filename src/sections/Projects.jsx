@@ -1,7 +1,7 @@
 import { Card, Heading } from "../components";
-import { useEffect, useState } from "react";
 
 import useAppearOnScroll from "../hooks/useAppearOnScroll";
+import { useGlobals } from "../contexts";
 
 /**
  * @typedef Project
@@ -26,24 +26,9 @@ import useAppearOnScroll from "../hooks/useAppearOnScroll";
 
 export default function Projects() {
   /**
-   *  @type {[Project[], React.Dispatch<React.SetStateAction<Project[]>>]}
+   *  @type {{projects: Project[]}}
    */
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch("/projects.json")
-      .then((res) => res.json())
-      .then(({ projects, tools }) => {
-        setProjects(
-          projects.map((project) => ({
-            ...project,
-            tools: project.tools.map((tool) =>
-              tools.find((t) => t.name === tool)
-            ),
-          }))
-        );
-      });
-  }, []);
+  const { projects } = useGlobals();
 
   const { ref, aosClassName } = useAppearOnScroll();
   return (
@@ -65,7 +50,7 @@ export default function Projects() {
               github={project.github}
               tools={project.tools}
               style={{
-                transitionDelay: `${index * 100}ms`,
+                transitionDelay: `${(index % 4) * 100}ms`,
               }}
             />
           ))}

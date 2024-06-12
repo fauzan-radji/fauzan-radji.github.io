@@ -118,17 +118,13 @@ export default function Card({
         <p className="text-sm">{description}</p>
         <div className="flex gap-1">
           {tools.map((tool) => (
-            <div
+            <SimpleIcons
               key={tool.name}
-              className="rounded-md p-1"
-              style={{ backgroundColor: tool.bg }}
-            >
-              <SimpleIcons
-                name={tool.name}
-                slug={tool.slug}
-                color={tool.color}
-              />
-            </div>
+              name={tool.name}
+              slug={tool.slug}
+              color={tool.color}
+              bg={tool.bg}
+            />
           ))}
         </div>
       </div>
