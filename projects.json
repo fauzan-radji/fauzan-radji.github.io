@@ -1,125 +1,81 @@
-{
-  "projects": [
-    {
-      "id": 1,
-      "image": "/images/gistana.png",
-      "title": "Gistana (WebGIS Destana)",
-      "description": "Gistana (WebGIS Destana) is a WebGIS that presents evacuation routes and gathering points in several villages in the Bulawa district, Bone Bolango Regency, Gorontalo, Indonesia.",
-      "web": "https://gistana.github.io",
-      "github": "https://github.com/gistana/gistana.github.io",
-      "tools": ["vue", "leaflet", "tailwind"]
-    },
-    {
-      "id": 2,
-      "image": "/images/kabggis.png",
-      "title": "Kabupaten Gorontalo GIS",
-      "description": "Kabupaten Gorontalo GIS (KabGGIS) is a WebGIS that provides geospatial information on agricultural areas in Gorontalo Regency, Gorontalo, Indonesia.",
-      "web": "https://kabggis.github.io/",
-      "github": "https://github.com/kabggis/kabggis.github.io/",
-      "tools": ["react", "leaflet", "tailwind"]
-    },
-    {
-      "id": 3,
-      "image": "/images/anonymsg.png",
-      "title": "Anonymsg",
-      "description": "An anonymous messaging platform for you to share your opinions freely without fear of other people's judgment",
-      "web": "https://anonymsg.vercel.app/",
-      "github": "https://github.com/fauzan-radji/anonymsg",
-      "tools": ["nextjs", "tailwind", "firebase", "vercel"]
-    },
-    {
-      "id": 4,
-      "image": "/images/ingridentify.png",
-      "title": "Ingridentify",
-      "description": "Ingridentify is an app that uses AI and computer vision to recognize fruits and vegetables, addressing meal planning, unhealthy eating habits, and food waste.",
-      "apk": "https://github.com/Ingridentify/Ingridentify/releases/download/v1.0.0/Ingridentify-v1.0.0.apk",
-      "github": "https://github.com/Ingridentify/Ingridentify",
-      "tools": ["android", "kotlin"]
-    },
-    {
-      "id": 5,
-      "image": "/images/seacinema.png",
-      "title": "Sea Cinema",
-      "description": "Seacinema is a functioning movie booking website that allows users to book tickets for movies, view movie details, and view their booking history.",
-      "web": "https://seacinema.vercel.app/",
-      "github": "https://github.com/fauzan-radji/react-movie-app/",
-      "tools": ["react", "tailwind", "vercel"]
-    },
-    {
-      "id": 6,
-      "image": "/images/ksl.png",
-      "title": "KSL Website",
-      "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
-      "web": "https://kslung.com/",
-      "tools": ["laravel", "tailwind", "mysql"]
-    }
-  ],
-  "tools": [
-    {
-      "name": "vue",
-      "slug": "vuedotjs",
-      "bg": "#4FC08D",
-      "color": "white"
-    },
-    {
-      "name": "react",
-      "slug": "react",
-      "bg": "#61DAFB",
-      "color": "black"
-    },
-    {
-      "name": "tailwind",
-      "slug": "tailwindcss",
-      "bg": "#06B6D4",
-      "color": "white"
-    },
-    {
-      "name": "leaflet",
-      "slug": "leaflet",
-      "bg": "#199900",
-      "color": "white"
-    },
-    {
-      "name": "nextjs",
-      "slug": "nextdotjs",
-      "bg": "#000000",
-      "color": "white"
-    },
-    {
-      "name": "firebase",
-      "slug": "firebase",
-      "bg": "#DD2C00",
-      "color": "white"
-    },
-    {
-      "name": "vercel",
-      "slug": "vercel",
-      "bg": "#000000",
-      "color": "white"
-    },
-    {
-      "name": "android",
-      "slug": "android",
-      "bg": "#34A853",
-      "color": "white"
-    },
-    {
-      "name": "kotlin",
-      "slug": "kotlin",
-      "bg": "#7F52FF",
-      "color": "white"
-    },
-    {
-      "name": "laravel",
-      "slug": "laravel",
-      "bg": "#FF2D20",
-      "color": "white"
-    },
-    {
-      "name": "mysql",
-      "slug": "mysql",
-      "bg": "#4479A1",
-      "color": "white"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "image": "/images/gistana.png",
+    "title": "Gistana (WebGIS Destana)",
+    "description": "Gistana (WebGIS Destana) is a WebGIS that presents evacuation routes and gathering points in several villages in the Bulawa district, Bone Bolango Regency, Gorontalo, Indonesia.",
+    "web": "https://gistana.github.io",
+    "github": "https://github.com/gistana/gistana.github.io",
+    "tools": ["Vue.js", "Leaflet", "Tailwind CSS"]
+  },
+  {
+    "id": 2,
+    "image": "/images/kabggis.png",
+    "title": "Kabupaten Gorontalo GIS",
+    "description": "Kabupaten Gorontalo GIS (KabGGIS) is a WebGIS that provides geospatial information on agricultural areas in Gorontalo Regency, Gorontalo, Indonesia.",
+    "web": "https://kabggis.github.io/",
+    "github": "https://github.com/kabggis/kabggis.github.io/",
+    "tools": ["React", "Leaflet", "Tailwind CSS"]
+  },
+  {
+    "id": 3,
+    "image": "/images/anonymsg.png",
+    "title": "Anonymsg",
+    "description": "An anonymous messaging platform for you to share your opinions freely without fear of other people's judgment",
+    "web": "https://anonymsg.vercel.app/",
+    "github": "https://github.com/fauzan-radji/anonymsg",
+    "tools": ["TypeScript", "Next.js", "Tailwind CSS", "Firebase", "Vercel"]
+  },
+  {
+    "id": 4,
+    "image": "/images/ingridentify.png",
+    "title": "Ingridentify",
+    "description": "Ingridentify is an app that uses AI and computer vision to recognize fruits and vegetables, addressing meal planning, unhealthy eating habits, and food waste.",
+    "apk": "https://github.com/Ingridentify/Ingridentify/releases/download/v1.0.0/Ingridentify-v1.0.0.apk",
+    "github": "https://github.com/Ingridentify/Ingridentify",
+    "tools": ["Android", "Android Studio", "Kotlin", "Gradle"]
+  },
+  {
+    "id": 9,
+    "image": "/images/story-telling.png",
+    "title": "StoryTelling",
+    "description": "This is a simple project to show user story from Dicoding Story API. This application was created as a submission to the Belajar Pengembangan Aplikasi Android Intermediate course in Dicoding.",
+    "github": "https://github.com/fauzan-radji/story-telling",
+    "tools": ["Android", "Android Studio", "Kotlin", "Gradle"]
+  },
+  {
+    "id": 5,
+    "image": "/images/json-modelizer.png",
+    "title": "JSON Modelizer",
+    "description": "A lightweight and intuitive Object-Relational Mapping (ORM) package designed to work with JSON files as a data storage solution.",
+    "npm": "https://www.npmjs.com/package/json-modelizer",
+    "github": "https://github.com/fauzan-radji/json-modelizer",
+    "tools": ["Javascript", "NPM", "JSON", "Node.js"]
+  },
+  {
+    "id": 6,
+    "image": "/images/seacinema.png",
+    "title": "Sea Cinema",
+    "description": "Seacinema is a functioning movie booking website that allows users to book tickets for movies, view movie details, and view their booking history.",
+    "web": "https://seacinema.vercel.app/",
+    "github": "https://github.com/fauzan-radji/React-movie-app/",
+    "tools": ["React", "Tailwind CSS", "Vercel"]
+  },
+  {
+    "id": 7,
+    "image": "/images/ksl.png",
+    "title": "KSL Website",
+    "description": "The official website of the Kelompok Studi Linux Universitas Negeri Gorontalo, which is used for new member registration.",
+    "web": "https://kslung.com/",
+    "tools": ["Laravel", "Tailwind CSS", "MySQL"]
+  },
+  {
+    "id": 8,
+    "image": "/images/any-apis.png",
+    "title": "Any Apis",
+    "description": "Contains any rest apis that I need, and maybe you need too.",
+    "web": "https://any-apis.vercel.app",
+    "github": "https://github.com/fauzan-radji/any-api",
+    "tools": ["Next.js", "Vercel"]
+  }
+]

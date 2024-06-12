@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Vue.js",
+    "slug": "vuedotjs",
+    "bg": "#4FC08D",
+    "color": "white"
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "bg": "#61DAFB",
+    "color": "black"
+  },
+  {
+    "name": "Tailwind CSS",
+    "slug": "tailwindcss",
+    "bg": "#06B6D4",
+    "color": "white"
+  },
+  {
+    "name": "Leaflet",
+    "slug": "leaflet",
+    "bg": "#199900",
+    "color": "white"
+  },
+  {
+    "name": "Next.js",
+    "slug": "nextdotjs",
+    "bg": "#000000",
+    "color": "white"
+  },
+  {
+    "name": "Firebase",
+    "slug": "firebase",
+    "bg": "#DD2C00",
+    "color": "white"
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "bg": "#000000",
+    "color": "white"
+  },
+  {
+    "name": "Android",
+    "slug": "android",
+    "bg": "#34A853",
+    "color": "white"
+  },
+  {
+    "name": "Android Studio",
+    "slug": "androidstudio",
+    "bg": "#3DDC84",
+    "color": "white"
+  },
+  {
+    "name": "Gradle",
+    "slug": "gradle",
+    "bg": "#02303A",
+    "color": "white"
+  },
+  {
+    "name": "Kotlin",
+    "slug": "kotlin",
+    "bg": "#7F52FF",
+    "color": "white"
+  },
+  {
+    "name": "Laravel",
+    "slug": "laravel",
+    "bg": "#FF2D20",
+    "color": "white"
+  },
+  {
+    "name": "MySQL",
+    "slug": "mysql",
+    "bg": "#4479A1",
+    "color": "white"
+  },
+  {
+    "name": "NPM",
+    "slug": "npm",
+    "bg": "#CB3837",
+    "color": "white"
+  },
+  {
+    "name": "JSON",
+    "slug": "json",
+    "bg": "#000000",
+    "color": "white"
+  },
+  {
+    "name": "Node.js",
+    "slug": "nodedotjs",
+    "bg": "#5FA04E",
+    "color": "white"
+  },
+  {
+    "name": "JavaScript",
+    "slug": "javascript",
+    "bg": "#F7DF1E",
+    "color": "black"
+  },
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "bg": "#3178C6",
+    "color": "white"
+  }
+]
