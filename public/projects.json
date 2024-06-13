@@ -40,6 +40,7 @@
     "image": "/images/story-telling.png",
     "title": "StoryTelling",
     "description": "This is a simple project to show user story from Dicoding Story API. This application was created as a submission to the Belajar Pengembangan Aplikasi Android Intermediate course in Dicoding.",
+    "apk": "https://github.com/fauzan-radji/story-telling/releases/download/v1.0.0/StoryTelling-v1.0.0.apk",
     "github": "https://github.com/fauzan-radji/story-telling",
     "tools": ["Android", "Android Studio", "Kotlin", "Gradle"]
   },
@@ -50,7 +51,7 @@
     "description": "A lightweight and intuitive Object-Relational Mapping (ORM) package designed to work with JSON files as a data storage solution.",
     "npm": "https://www.npmjs.com/package/json-modelizer",
     "github": "https://github.com/fauzan-radji/json-modelizer",
-    "tools": ["Javascript", "NPM", "JSON", "Node.js"]
+    "tools": ["JavaScript", "NPM", "JSON", "Node.js"]
   },
   {
     "id": 6,
@@ -77,5 +78,14 @@
     "web": "https://any-apis.vercel.app",
     "github": "https://github.com/fauzan-radji/any-api",
     "tools": ["Next.js", "Vercel"]
+  },
+  {
+    "id": 10,
+    "image": "/images/kanvasgl.png",
+    "title": "KanvasGL",
+    "description": "A Javascript library to do Computer Graphics on the HTML5 Canvas element.",
+    "npm": "https://www.npmjs.com/package/kanvasgl",
+    "github": "https://github.com/fauzan-radji/kanvasgl",
+    "tools": ["TypeScript", "JavaScript", "NPM", "Node.js"]
   }
 ]
