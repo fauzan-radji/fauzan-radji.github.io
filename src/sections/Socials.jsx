@@ -14,7 +14,7 @@ export default function Socials() {
             label="GitHub"
           />
           <SocialLink
-            href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji-404810257/"
+            href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji/"
             icon={FaLinkedin}
             label="LinkedIn"
           />

@@ -44,7 +44,7 @@ export default function Hero() {
               Download CV
             </a>
             <a
-              href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji-404810257/"
+              href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji/"
               target="_blank"
               rel="noreferrer noopener"
               className="flex items-center gap-2 rounded border border-empire-yellow px-4 py-2 text-inherit shadow-md transition-colors hover:bg-empire-yellow hover:text-corbeau"

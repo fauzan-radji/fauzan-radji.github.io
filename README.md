@@ -39,7 +39,7 @@
 <h2 align="center">Connect with me</h2>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji-404810257/" target="_blank" title="Tri Putra Fauzan H. Radji">
+  <a href="https://www.linkedin.com/in/tri-putra-fauzan-h-radji/" target="_blank" title="Tri Putra Fauzan H. Radji">
     <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-05122A?style=flat&logo=linkedin" />
   </a>
   <a href="https://fauzan-radji.github.io" target="_blank" title="fauzan-radji.github.io">
