@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="bg-corbeau">
       <div className="container mx-auto py-4">
         <p className="text-center text-sm text-white">
-          &copy; 2024 <span className="font-bold">Fauzan Radji</span>. All
-          rights reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <span className="font-bold">Fauzan Radji</span>. All rights reserved.
         </p>
       </div>
     </footer>

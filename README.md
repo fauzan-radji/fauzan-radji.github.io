@@ -6,7 +6,7 @@
 
 <p align="center">
   🎓 &nbsp;I'm an <strong>Informatics</strong> student at <strong><a href="https://www.ung.ac.id/" target="_blank" title="Universitas Negeri Gorontalo">Universitas Negeri Gorontalo</a></strong><br />
-  🌱 &nbsp;I'm currently learning <strong>Flutter</strong><br />
+  🌱 &nbsp;I'm currently learning <strong>Kotlin Multiplatform</strong><br />
   💻 &nbsp;I use <strong>Visual Studio Code</strong><br />
   🐧 &nbsp;I use <strong>Ubuntu 22.04 LTS</strong><br />
   📫 &nbsp;Ask me anything on my <strong><a href="https://github.com/fauzan-radji/fauzan-radji/issues" target="_blank" title="fauzan-radji/issues">issues page</a></strong><br />

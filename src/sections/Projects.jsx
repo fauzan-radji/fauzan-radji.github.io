@@ -44,6 +44,7 @@ export default function Projects() {
               image={project.image}
               title={project.title}
               description={project.description}
+              linkedin={project.linkedin}
               apk={project.apk}
               npm={project.npm}
               web={project.web}

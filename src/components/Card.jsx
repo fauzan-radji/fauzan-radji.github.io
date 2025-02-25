@@ -1,4 +1,10 @@
-import { FaAndroid, FaGithub, FaGlobe, FaNpm } from "react-icons/fa6";
+import {
+  FaAndroid,
+  FaGithub,
+  FaGlobe,
+  FaNpm,
+  FaLinkedin,
+} from "react-icons/fa6";
 
 import PropTypes from "prop-types";
 import SimpleIcons from "./SimpleIcons";
@@ -19,6 +25,7 @@ import { useLightbox } from "../contexts";
  * @param {string} props.image
  * @param {string} props.title
  * @param {string} props.description
+ * @param {string} props.linkedin
  * @param {string} props.apk
  * @param {string} props.npm
  * @param {string} props.web
@@ -31,6 +38,7 @@ export default function Card({
   image,
   title,
   description,
+  linkedin,
   apk,
   npm,
   web,
@@ -67,6 +75,18 @@ export default function Card({
           <h4 className="font-bold text-lemon-peel">{title}</h4>
 
           <div className="flex items-center gap-2">
+            {linkedin && (
+              <a
+                className="flex h-6 cursor-pointer items-center rounded border border-empire-yellow/50 px-2 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
+                href={linkedin}
+                target="_blank"
+                rel="noreferrer noopener"
+                title="View LinkedIn Post"
+              >
+                <FaLinkedin />
+              </a>
+            )}
+
             {apk && (
               <a
                 className="flex h-6 cursor-pointer items-center rounded border border-empire-yellow/50 px-2 text-sm text-empire-yellow transition-colors hover:bg-empire-yellow hover:text-dark-knight"
@@ -115,7 +135,9 @@ export default function Card({
             )}
           </div>
         </div>
-        <p className="text-sm">{description}</p>
+        <p className="line-clamp-4 text-sm" title={description}>
+          {description}
+        </p>
         <div className="flex gap-1">
           {tools.map((tool) => (
             <SimpleIcons
@@ -136,6 +158,7 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  linkedin: PropTypes.string,
   apk: PropTypes.string,
   npm: PropTypes.string,
   web: PropTypes.string,
